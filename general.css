@@ -1,9 +1,17 @@
+
+
 html{
     scroll-behavior:smooth;
+    
 }
+body{
+    font-family: 'Poppins', sans-serif !important;
+}
+
 #loading{
     height: 100vh;
 }
+
 
 .fa-instagram{
     font-size: 70px;
@@ -44,6 +52,7 @@ html{
 }
 #carta{
     transition: box-shadow .1s;
+    height: 280px;
 }
 #carta:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
@@ -60,3 +69,16 @@ html{
 .skills:hover{
     filter: invert(12%) sepia(92%) saturate(5740%) hue-rotate(234deg) brightness(95%) contrast(100%);
 }
+
+/*/ animaciones /*/
+.slide-fade-enter-active {
+    transition: all .3s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+  }

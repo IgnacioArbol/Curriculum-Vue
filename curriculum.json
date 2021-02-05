@@ -10,11 +10,12 @@
                 "projects":"Proyectos",
                 "languages":"Idiomas",
                 "contact":"Contacto",
-                "change":"change language",
+                "change":"English",
                 "go":"saber más",
                 "exit":"Salir",
                 "repositorio":"Link en Github",
-                "production":"Link en producción"
+                "production":"Link en producción",
+                "hide":"Ocultar"
             },
         
             "aboutme":{
@@ -23,6 +24,7 @@
                 "surname":"Árbol Gómez",
                 "aboutme":"Soy un chico que actualmente esta estudiando desarrollo de aplicaciones web en IES Francisco Ayala Con un perfil de Full Stack development",
                 "direction":"España",
+                "age":"9/8/2001",
                 "email":"ignacioarbol@gmail.com",
                 "tel":"640787601",
                 "instagram":"https://www.instagram.com/nachete_gomez/",
@@ -125,11 +127,11 @@
                 }
             ],
                 "references":[
-                    {"image":"https://thispersondoesnotexist.com/image",
+                    {"image":"images/tio1.jpg",
                     "text":"Este chico es un excelente trabajador, me encanta como lo hace todo, increible"},
                     {"image":"https://thispersondoesnotexist.com/image",
                         "text":"Se adapta a todo, ojala más gente como él, un grande"},
-                    {"image":"https://thispersondoesnotexist.com/image",
+                    {"image":"images/tio2.jpg",
                         "text":"Al final se le echa de menos cuando no está en tu plantilla, es un chico genial"}
 
             ],
@@ -164,17 +166,19 @@
             "projects":"Proyects",
             "languages":"Languages",
             "contact":"Contact",
-            "change":"Cambiar idioma",
+            "change":"Español",
             "go":"More information",
             "exit":"Exit",
             "repositorio":"Github link",
-            "production":"Production link"
+            "production":"Production link",
+            "hide":"Hide"
         },
     
         "aboutme":{
             "image":"images/yo.png",
             "name":"Ignacio",
             "surname":"Árbol Gómez",
+            "age":"9/8/2001",
             "aboutme":"I am a boy who is currently studying web application development at IES Francisco Ayala With a Full Stack development profile",
             "direction":"Spain",
             "email":"ignacioarbol@gmail.com",

@@ -4,7 +4,9 @@
         <title>Curriculum</title>
         <meta charset="utf-8" lang="es">
         <link rel="stylesheet" href="general.css">
+        
         <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
@@ -47,7 +49,7 @@
                   
                 </div>
                 <div id="derecha">
-                  <button v-on:click="cambiarIdioma()" class="btn btn-primary">{{json.menu.change}}</button>
+                  <button v-on:click="cambiarIdioma()" class="btn btn-warning">{{json.menu.change}}</button>
               </div>
               
               </nav>
@@ -58,11 +60,12 @@
                         <p class="h1">{{json.aboutme.name}}</p>
                         <P class="h2 mb-4">{{json.aboutme.surname}}</P>
                         <p>{{json.aboutme.email}}</p>
+                        <p>{{json.aboutme.age}}</p>
                         <p>{{json.aboutme.direction}}</p>
                         <p>{{json.aboutme.tel}}</p> 
                         <p class="ml-5 mr-5 d-none d-sm-block">{{json.aboutme.aboutme}}</p>
-                        <div id="redessociales" class="d-flex justify-content-center mt-auto justify-content-around ml-5 mr-5 ">
-                          <a :href="json.aboutme.instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <div id="redessociales" class="d-flex justify-content-center mt-3 justify-content-around ml-5 mr-5  ">
+                          <a :href="json.aboutme.instagram" target="_blank" class="mt-auto"><i class="fab fa-instagram"></i></a>
                           <a :href="json.aboutme.github" target="_blank"><i class="fab fa-github"></i></a>
                           <a :href="json.aboutme.linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
                         </div>
@@ -76,17 +79,26 @@
                     <p>{{json.aboutme.aboutme}}</p>
                   </div>
                   <!--Experiencia-->
+                  <div class="mt-5"></div>
                   <div id="experiencia" class="pt-5 ml-5">
                     <p class="h1">{{json.menu.experience}}</p>
                     <br>
                     <div v-for="experience in experiencias" :key="job" class="ml-3">
+                      
+                        
                       <p class="h5">{{experience.job.name}}</p>
+                      <transition name="slide-fade">
+                      <div v-if="show">
                       <p>{{experience.job.description}}</p>
                       <p>{{experience.job.startdate}}</p>
                       <p>{{experience.job.finishdate}}</p>
+                    </div>
+                    </transition>
                       <br>
                     </div>
-                  
+                    <button class="btn btn-warning" @click="show = !show">
+                      {{json.menu.hide}}
+                    </button>
                   </div>
                   <!-- Educación -->
                   <div id="educacion" class="pt-5 ml-sm-5 mr-sm-3 ">
@@ -144,11 +156,11 @@
                     <br>
                     <div class="d-flex flex-wrap justify-content-center align-content-center mt-5 text-center">
                     <div v-for="(proyecto,index) in proyectos" :key="" class="mr-5 mb-4">
-                      <div id="carta" class="card shadow mb-5 bg-white rounded" style="width: 18rem;" >
-                        <img class="card-img-top" :src="proyecto.imagenes.imagen1" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">{{proyecto.name}}</h5>
-                          <button class="btn btn-primary" data-toggle="modal" :data-target="`#modal${index}`" >{{json.menu.go}}</button>
+                      <div id="carta" class="card shadow mb-5 bg-white rounded align-self-center" style="width: 18rem;" >
+                        <img class="card-img-top" height="150px" :src="proyecto.imagenes.imagen1" alt="Card image cap">
+                        <div class="card-body ">
+                          <h5 class="card-title ">{{proyecto.name}}</h5>
+                          <button class="btn btn-warning " data-toggle="modal" :data-target="`#modal${index}`" >{{json.menu.go}}</button>
                         </div>
                       </div>
                       <!-- modal-->
@@ -167,8 +179,8 @@
                               <img :src="proyecto.imagenes.imagen2" width="200px">
                               <br>
                               <br>
-                              <a target="_blank" :href="proyecto.link"><button type="button" class="btn btn-primary">{{json.menu.production}}</button></a>
-                              <a target="_blank" :href="proyecto.repositorio"><button type="button" class="btn btn-primary">{{json.menu.repositorio}}</button></a>
+                              <a target="_blank" :href="proyecto.link"><button type="button" class="btn btn-warning">{{json.menu.production}}</button></a>
+                              <a target="_blank" :href="proyecto.repositorio"><button type="button" class="btn btn-warning">{{json.menu.repositorio}}</button></a>
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">{{json.menu.exit}}</button>
@@ -263,10 +275,10 @@
                       <div class="form-group">
                         <label for="texto">{{json.form.texto}}</label>
                         <textarea class="form-control is-valid" id="text" rows="3" required></textarea>
-                      </div>
+                      </div> 
                       
                       
-                      <button type="submit" class="btn btn-primary">{{json.form.button}}</button>
+                      <button type="submit" class="btn btn-warning">{{json.form.button}}</button>
                     </form>
                   </div>
 

@@ -5,6 +5,7 @@ window.onload = function(){
 new Vue({
     el: '#app',
     data: {
+        show:true,
         idioma : true,
       espanol: null,
       english: null,
