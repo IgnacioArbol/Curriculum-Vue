@@ -1,0 +1,299 @@
+{
+    "espanol":{
+        
+            "menu":{
+                "aboutme":"Sobre mi",
+                "experience":"Experiencia",
+                "education":"Educación",
+                "skills":"Habilidades",
+                "references":"Referencias",
+                "projects":"Proyectos",
+                "languages":"Idiomas",
+                "contact":"Contacto",
+                "change":"change language",
+                "go":"saber más",
+                "exit":"Salir",
+                "repositorio":"Link en Github",
+                "production":"Link en producción"
+            },
+        
+            "aboutme":{
+                "image":"images/yo.png",
+                "name":"Ignacio",
+                "surname":"Árbol Gómez",
+                "aboutme":"Soy un chico que actualmente esta estudiando desarrollo de aplicaciones web en IES Francisco Ayala Con un perfil de Full Stack development",
+                "direction":"España",
+                "email":"ignacioarbol@gmail.com",
+                "tel":"640787601",
+                "instagram":"https://www.instagram.com/nachete_gomez/",
+                "github":"https://github.com/IgnacioArbol",
+                "linkedin":"https://www.linkedin.com/in/ignacio-arbol-439592201/"
+            },
+        
+        
+            "experience":[
+                {
+                    "job":{
+                        "name":"Voluntariado en campamentos de verano",
+                        "startdate":"7/7/2018",
+                        "finishdate":" ",
+                        "description":"Monitor durante 1 semana"
+                    }
+                },
+                {
+                    "job":{
+                        "name":"Profesor clases particulares",
+                        "startdate":"20/9/2019",
+                        "finishdate":" ",
+                        "description":"Doy clases a niños de 8 a 11 años en ingles y matematicas"
+                    }
+                }
+            ],
+        
+            "education":[
+                {
+                    "table":{
+                        "name":"Nombre",
+                        "date":"Fechar",
+                        "place":"Lugar"
+                    }
+                },
+                {
+                    "name":"Desarollo de Aplicaciones Web",
+                    "date":"Actual",
+                    "place":"IES Francisco Ayala"
+                },
+                {
+                        "name":"Bachillerato",
+                        "date":"7/6/2019",
+                        "place":"IES Manuel de Falla"
+                    },
+                
+                {
+                        "name":"Educacion Secundaria obligatoria",
+                        "date":"7/6/2017",
+                        "place":"Sagrado Corazón Maracena"
+                    }
+            ],
+        
+            "skills":[
+                {"name":"JavaScript",
+                "image":"images/js.svg"},
+                {"name":"HTML",
+                "image":"images/html.svg"},
+                {"name":"CSS",
+                "image":"images/css.svg"},
+                {"name":"PHP",
+                "image":"images/php.svg"},
+                {"name":"vue",
+                "image":"images/vue.svg"},
+                {"name":"bootstrap",
+                "image":"images/bootstrap.svg"}
+            ],
+        
+            "proyects":[
+                    {
+                    "name":"landing-page",
+                    "description":" proyeto de landing-page para probar nuestros conocimientos dados en clase",
+                    "link":"https://ignacioarbol.github.io/Landing-page/",
+                    "repositorio":"https://github.com/IgnacioArbol/Landing-page",
+                    "imagenes":{
+                        "imagen1":"images/landingpage1.png",
+                        "imagen2":"images/landingpage2.png"
+                    }
+                },
+            
+                {
+                    "name":"Pong",
+                    "description":" Minijuego sobre el mitico Pong",
+                    "link":"",
+                    "repositorio":"https://github.com/IgnacioArbol/Pong",
+                    "imagenes":{
+                        "imagen1":"images/pong.png",
+                        "imagen2":""
+                    } 
+                },
+                {
+                    "name":"HP-Api",
+                    "description":" Buscador de personajes de Harry potter",
+                    "link":"https://ignacioarbol.github.io/Hp-API/",
+                    "repositorio":"https://github.com/IgnacioArbol/Hp-API",
+                    "imagenes":{
+                        "imagen1":"images/hp1.png",
+                        "imagen2":"images/hp2.png"
+                    } 
+                }
+            ],
+                "references":[
+                    {"image":"https://thispersondoesnotexist.com/image",
+                    "text":"Este chico es un excelente trabajador, me encanta como lo hace todo, increible"},
+                    {"image":"https://thispersondoesnotexist.com/image",
+                        "text":"Se adapta a todo, ojala más gente como él, un grande"},
+                    {"image":"https://thispersondoesnotexist.com/image",
+                        "text":"Al final se le echa de menos cuando no está en tu plantilla, es un chico genial"}
+
+            ],
+            
+                "languages":[
+                    {"name":"Español",
+                    "image":"https://upload.wikimedia.org/wikipedia/commons/8/81/Bandera_de_Espa%C3%B1a_1978.png",
+                    "value":"100%"},
+                    {"name":"Inglés",
+                    "image":"https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg",
+                    "value":"60%"},
+                    {"name":"Francés",
+                    "image":"https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
+                    "value":"10%"}
+                ],
+            "form":{
+                "name":"Nombre",
+                "email":"E-mail",
+                "texto":"¿Qué necesitas saber?",
+                "button":"Enviar"
+            }
+            
+    },
+    "english":{
+        
+        "menu":{
+            "aboutme":"About me",
+            "experience":"Experience",
+            "education":"Education",
+            "skills":"skills",
+            "references":"References",
+            "projects":"Proyects",
+            "languages":"Languages",
+            "contact":"Contact",
+            "change":"Cambiar idioma",
+            "go":"More information",
+            "exit":"Exit",
+            "repositorio":"Github link",
+            "production":"Production link"
+        },
+    
+        "aboutme":{
+            "image":"images/yo.png",
+            "name":"Ignacio",
+            "surname":"Árbol Gómez",
+            "aboutme":"I am a boy who is currently studying web application development at IES Francisco Ayala With a Full Stack development profile",
+            "direction":"Spain",
+            "email":"ignacioarbol@gmail.com",
+            "tel":"640787601",
+            "instagram":"https://www.instagram.com/nachete_gomez/",
+            "github":"https://github.com/IgnacioArbol",
+            "linkedin":"https://www.linkedin.com/in/ignacio-arbol-439592201/"
+        },
+    
+    
+        "experience":[
+            {
+                "job":{
+                    "name":"Volunteering in summer camps",
+                    "startdate":"7/7/2018",
+                    "finishdate":" ",
+                    "description":"monitor for 1 week"
+                }
+            },
+            {
+                "job":{
+                    "name":"Private lessons teacher",
+                    "startdate":"20/9/2019",
+                    "finishdate":" ",
+                    "description":"I teach children from 8 to 11 years old in English and mathematics"
+                }
+            }
+        ],
+    
+        "education":[
+            {
+                "table":{
+                    "name":"Name",
+                    "date":"Date",
+                    "place":"Place"
+                }
+            },
+            {
+                "name":"Web Application Development",
+                "date":"Actual",
+                "place":"IES Francisco Ayala"
+            },
+                {
+                    "name":"Bachillerato",
+                    "date":"7/6/2019",
+                    "place":"IES Manuel de Falla"
+                    },
+                {
+                    "name":"High School",
+                    "date":"7/6/2017",
+                    "place":"Sagrado Corazón Maracena"
+                    }
+            ],
+    
+        "skills":[
+            {"name":"JavaScript",
+                "image":"images/js.svg"},
+                {"name":"HTML",
+                "image":"images/html.svg"},
+                {"name":"CSS",
+                "image":"images/css.svg"},
+                {"name":"PHP",
+                "image":"images/php.svg"},
+                {"name":"vue",
+                "image":"images/vue.svg"},
+                {"name":"bootstrap",
+                "image":"images/bootstrap.svg"}
+        ],
+    
+        "proyects":[
+                {
+                "name":"landing-page",
+                "description":" landing page project to test our knowledge given in class",
+                "repositorio":"https://github.com/IgnacioArbol/Landing-page",
+                "link":"https://ignacioarbol.github.io/Landing-page/",
+                "imagenes":{
+                    "imagen1":"images/landingpage1.png",
+                    "imagen2":"images/landingpage2.png"
+                }
+            },
+            {
+                "name":"Pong",
+                "description":" Minigame about the mythical Pong",
+                "link":"",
+                "repositorio":"https://github.com/IgnacioArbol/Pong",
+                "imagenes":{
+                    "imagen1":"images/pong.png",
+                    "imagen2":""
+                } 
+            },
+            {
+                "name":"HP-Api",
+                "description":" It's a Harry Potter character finder.",
+                "link":"https://ignacioarbol.github.io/Hp-API/",
+                "repositorio":"https://github.com/IgnacioArbol/Hp-API",
+                "imagenes":{
+                    "imagen1":"images/hp1.png",
+                    "imagen2":"images/hp2.png"
+                } 
+            }
+        ],
+        
+        "languages":[
+            {"name":"Spanish",
+                "image":"https://upload.wikimedia.org/wikipedia/commons/8/81/Bandera_de_Espa%C3%B1a_1978.png",
+                "value":"100%"},
+                {"name":"English",
+                "image":"https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg",
+                "value":"60%"},
+                {"name":"French",
+                "image":"https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
+                "value":"10%"}
+        ],
+            "form":{
+                "name":"Name",
+                "email":"E-mail",
+                "texto":"What you need to know?",
+                "button":"Summit"
+            }
+        
+}
+}

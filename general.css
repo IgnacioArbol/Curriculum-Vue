@@ -1,0 +1,62 @@
+html{
+    scroll-behavior:smooth;
+}
+#loading{
+    height: 100vh;
+}
+
+.fa-instagram{
+    font-size: 70px;
+    color: black
+}
+.fa-instagram:hover{
+    color:purple
+}
+.fa-github{
+    font-size: 70px;
+    color: black
+}
+.fa-github:hover {
+    color:purple
+}
+.fa-linkedin{
+    font-size: 70px;
+    color: black
+}
+.fa-linkedin:hover{
+    color: purple
+}
+#yo{
+    max-width: 150px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+.banderas{
+    width: 100px;
+    
+    border-radius: 20%;
+}
+.personas{
+    border-radius: 100%;
+}
+.redessociales{
+    height: 40px;
+}
+#carta{
+    transition: box-shadow .1s;
+}
+#carta:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+#posicionador{
+    z-index: 3;
+    height: 10px;
+}
+#sobremi{
+    z-index:0;
+    height: 100vh;
+    border-right: 2px solid grey;
+}
+.skills:hover{
+    filter: invert(12%) sepia(92%) saturate(5740%) hue-rotate(234deg) brightness(95%) contrast(100%);
+}

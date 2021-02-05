@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curriculum</title>
+        <meta charset="utf-8" lang="es">
+        <link rel="stylesheet" href="general.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    </head>
+    <body data-spy="scroll" data-target="#menu" data-offset="0">
+        <div id="app" >
+          <div v-if="this.json">
+            <nav id="navbar"class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class=" collapse navbar-collapse " id="menu">
+                  <ul class="navbar-nav m-0 mt-2 mt-lg-0">
+                    <li class="nav-item" >
+                      <a class="nav-link d-block d-sm-none" href="#sobremi">{{json.menu.aboutme}}</a>
+                    </li>
+                    <li class="nav-item " >
+                      <a class="nav-link active" href="#experiencia" >{{json.menu.experience}}</a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link active" href="#educacion">{{json.menu.education}}</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="#habilidades">{{json.menu.skills}}</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#proyectos">{{json.menu.projects}}</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#referencias">{{json.menu.references}}</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#idiomas">{{json.menu.languages}}</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#formulario">{{json.menu.contact}}</a>
+                      </li>
+                  </ul>
+                  
+                </div>
+                <div id="derecha">
+                  <button v-on:click="cambiarIdioma()" class="btn btn-primary">{{json.menu.change}}</button>
+              </div>
+              
+              </nav>
+            <div id="contenedor" class="row" >
+                <div id="sobremi" class="col-5 d-flex flex-column align-content-center text-center justify-content-center position-fixed ">
+                    <div><img id="yo" :src="json.aboutme.image"></div>
+                    <div class="d-flex flex-column">
+                        <p class="h1">{{json.aboutme.name}}</p>
+                        <P class="h2 mb-4">{{json.aboutme.surname}}</P>
+                        <p>{{json.aboutme.email}}</p>
+                        <p>{{json.aboutme.direction}}</p>
+                        <p>{{json.aboutme.tel}}</p> 
+                        <p class="ml-5 mr-5 d-none d-sm-block">{{json.aboutme.aboutme}}</p>
+                        <div id="redessociales" class="d-flex justify-content-center mt-auto justify-content-around ml-5 mr-5 ">
+                          <a :href="json.aboutme.instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                          <a :href="json.aboutme.github" target="_blank"><i class="fab fa-github"></i></a>
+                          <a :href="json.aboutme.linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="posicionador" class="col-5"></div>
+                <div id="contenido "  class="col-7">
+                  <!-- Sobre mi en movil-->
+                  <div class="d-block d-sm-none mt-5 ml-5">
+                    <p class="h1">{{json.menu.aboutme}}</p>
+                    <p>{{json.aboutme.aboutme}}</p>
+                  </div>
+                  <!--Experiencia-->
+                  <div id="experiencia" class="pt-5 ml-5">
+                    <p class="h1">{{json.menu.experience}}</p>
+                    <br>
+                    <div v-for="experience in experiencias" :key="job" class="ml-3">
+                      <p class="h5">{{experience.job.name}}</p>
+                      <p>{{experience.job.description}}</p>
+                      <p>{{experience.job.startdate}}</p>
+                      <p>{{experience.job.finishdate}}</p>
+                      <br>
+                    </div>
+                  
+                  </div>
+                  <!-- Educación -->
+                  <div id="educacion" class="pt-5 ml-sm-5 mr-sm-3 ">
+                      <p class="h1">{{json.menu.education}}</p>
+                      <br>
+                      <table class="table table-striped table-secondary shadow p-3 mb-5  rounded">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">{{json.education[0].table.name}}</th>
+                            <th scope="col">{{json.education[0].table.place}}</th>
+                            <th scope="col">{{json.education[0].table.date}}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>{{json.education[1].name}}</td>
+                            <td>{{json.education[1].place}}</td>
+                            <td>{{json.education[1].date}}</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>{{json.education[2].name}}</td>
+                            <td>{{json.education[2].place}}</td>
+                            <td>{{json.education[2].date}}</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>{{json.education[3].name}}</td>
+                            <td>{{json.education[3].place}}</td>
+                            <td>{{json.education[3].date}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                  </div>
+                  <!-- Habilidades -->
+                  <div id="habilidades" class="pt-5 ml-5">
+                  <p class="h1">{{json.menu.skills}}</p>
+                  <br>
+                  <div class="d-flex flex-wrap justify-content-center text-center">
+                    <div v-for="habilidad in habilidades" :key="" class="ml-3">
+                      <div><img class="skills"style="width: 100px;" :src="habilidad.image"></div>
+                      <p class="h5">{{habilidad.name}}</p>
+                      
+                      <br>
+                    </div>
+                  </div>
+                  </div>
+                  
+                  <!-- Proyectos -->
+                  <div id="proyectos" class="pt-5 ml-5">
+                    <p class="h1">{{json.menu.projects}}</p>
+                    <br>
+                    <div class="d-flex flex-wrap justify-content-center align-content-center mt-5 text-center">
+                    <div v-for="(proyecto,index) in proyectos" :key="" class="mr-5 mb-4">
+                      <div id="carta" class="card shadow mb-5 bg-white rounded" style="width: 18rem;" >
+                        <img class="card-img-top" :src="proyecto.imagenes.imagen1" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">{{proyecto.name}}</h5>
+                          <button class="btn btn-primary" data-toggle="modal" :data-target="`#modal${index}`" >{{json.menu.go}}</button>
+                        </div>
+                      </div>
+                      <!-- modal-->
+                      <div class="modal fade" :id="'modal'+index" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title  text-center">{{proyecto.name}}</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <p>{{proyecto.description}}</p>
+                              <img :src="proyecto.imagenes.imagen1" width="200px">
+                              <img :src="proyecto.imagenes.imagen2" width="200px">
+                              <br>
+                              <br>
+                              <a target="_blank" :href="proyecto.link"><button type="button" class="btn btn-primary">{{json.menu.production}}</button></a>
+                              <a target="_blank" :href="proyecto.repositorio"><button type="button" class="btn btn-primary">{{json.menu.repositorio}}</button></a>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">{{json.menu.exit}}</button>
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div id="referencias" class="pt-5 ml-5">
+                    <br>
+                    <p class="h1">{{json.menu.references}}</p>
+                    <div v-for="referencia in referencias" class="d-flex mt-5 mb-5 shadow-lg mb-5 p-3 mr-5 bg-white rounded">
+                      <img class="personas" :src="referencia.image" width="70px">
+                      <p class="ml-5 mr-3">{{referencia.text}}</p>
+                    </div>
+                  </div>
+                <!-- Idiomas -->
+                  <div id="idiomas" class="pt-5 ml-5">
+                    <p class="h1">{{json.menu.languages}}</p>
+                   <!-- Primera lengua -->
+                    <br>
+                    <div id="mothertongue" class=" align-items-center shadow-lg mb-5 p-3 mr-5 bg-white rounded">
+                      <div class="d-flex align-items-center">
+                      <img class="banderas" :src="json.languages[0].image">
+                      <p class="ml-5  text-center h4">{{json.languages[0].name}}</p>
+                      </div>
+                      <div class="d-flex justify-content-between mr-5">
+                        <p>0</p>
+                        <p>25</p>
+                        <p>50</p>
+                        <p>75</p>
+                        <p>100</p>
+                      </div>
+                    <div class="progress mr-5">
+                      <div class="progress-bar bg-success " role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    </div>
+                    <!-- Segunda lengua -->
+                    <div id="SecondLanguage" class=" align-items-center shadow-lg mb-5 p-3 mr-5 bg-white rounded">
+                      <div class="d-flex align-items-center">
+                      <img class="banderas" :src="json.languages[1].image">
+                      <p class="ml-5  text-center h4">{{json.languages[1].name}}</p>
+                      </div>
+                      <div class="d-flex justify-content-between mr-5">
+                        <p>0</p>
+                        <p>25</p>
+                        <p>50</p>
+                        <p>75</p>
+                        <p>100</p>
+                      </div>
+                    <div class="progress mr-5">
+                      <div class="progress-bar bg-success " role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    </div>
+                   <!-- tercera lengua -->
+                    <div id="thirthLanguge" class=" align-items-center shadow-lg mb-5 p-3 mr-5 bg-white rounded">
+                      <div class="d-flex align-items-center">
+                      <img class="banderas" :src="json.languages[2].image">
+                      <p class="ml-5  text-center h4">{{json.languages[2].name}}</p>
+                      </div>
+                      <div class="d-flex justify-content-between mr-5">
+                        <p>0</p>
+                        <p>25</p>
+                        <p>50</p>
+                        <p>75</p>
+                        <p>100</p>
+                      </div>
+                    <div class="progress mr-5">
+                      <div class="progress-bar bg-success " role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    </div>
+                  </div>
+                  <!-- Formulario-->
+                  <div id="formulario" class="was-validated pt-5 mt-5 pb-5 mr-5">
+                    <p class="h1">{{json.menu.contact}}</p>
+                    <br>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="nombre">{{json.form.name}}</label>
+                          <input type="text" class="form-control is-valid" id="nombre":placeholder="json.form.name" required>
+                        </div>
+                        
+                        <div class="form-group col-md-6">
+                          <label for="email">{{json.form.email}}</label>
+                          <input type="email" class="form-control is-valid" id="email" :placeholder="json.form.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="texto">{{json.form.texto}}</label>
+                        <textarea class="form-control is-valid" id="text" rows="3" required></textarea>
+                      </div>
+                      
+                      
+                      <button type="submit" class="btn btn-primary">{{json.form.button}}</button>
+                    </form>
+                  </div>
+
+                </div>
+            </div>
+
+          </div>
+          <div v-else id="loading"class="d-flex justify-content-center align-items-center" >
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div> 
+        </div>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js" integrity="sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
